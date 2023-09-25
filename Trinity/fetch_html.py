@@ -4,7 +4,7 @@ import requests
 from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
 
-save_directory = "fetched"
+save_directory = "fetched/Trinity"
 base_url = "https://trinityrealestatenicaragua.com/for-sale/"
 
 def main():
