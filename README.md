@@ -1,2 +1,2 @@
-# link-list-creator
-Crawl a website and build a list of links to unique single property view pages.
+# html-fetcher
+Crawl a website and build an offline archive of html pages.
