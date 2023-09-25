@@ -51,3 +51,5 @@ def crawl_web_page(url):
             if urlparse(subpage_url).netloc == urlparse(url).netloc:
                 # Crawl the subpage recursively
                 crawl_web_page(subpage_url)
+
+crawl_web_page(base_url)

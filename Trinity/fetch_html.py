@@ -1,14 +1,15 @@
 import os
+import time
 import requests
 from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
 
+save_directory = "web_pages"
+base_url = "https://trinityrealestatenicaragua.com/for-sale/"
+
 def main():
     # Base URL of the webpage to crawl
-    base_url = "https://trinityrealestatenicaragua.com/for-sale/"
-
-    # Directory to store the crawled web pages
-    save_directory = "web_pages"
+    crawl_web_page(base_url)
 
 # Function to save the web page as an HTML file
 def save_web_page(url, content):
@@ -26,6 +27,7 @@ def save_web_page(url, content):
 # Function to crawl the webpage and save subpages
 def crawl_web_page(url):
     # Send a GET request to the URL
+    time.sleep(5);
     response = requests.get(url)
     if response.status_code == 200:
         # Extract the HTML content
